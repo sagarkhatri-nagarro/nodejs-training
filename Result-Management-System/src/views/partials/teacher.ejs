@@ -1,0 +1,43 @@
+<br/><div class="row">
+    <div class="inline col-lg-4 text-left">
+        <button class="btn btn-primary"  onclick="location.href='/addResult'">Add Record</button>        
+    </div>
+    <div class="inline col-lg-4 text-center">
+        <b>Total <%= students.length %> Students</b>
+    </div>
+    <div class="inline col-lg-4 text-end">
+        <button class="btn btn-danger" onclick="location.href='/'">logout</button>
+    </div>
+</div>
+<hr/>
+<div>
+    <% if(students.length>0){ %>
+    <table class="table ">
+        <tr>
+            <th>Roll No.</th>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Score</th>
+            <th>Actions</th>
+        </tr>        
+        
+        <% for(let i =0;i < students.length; i++){ %>
+            <tr>
+                <td><%=students[i].rollno %></td>
+                <td><%=students[i].name %></td>
+                <td><%=students[i].dob %></td>
+                <td><%=students[i].score %> </td>
+                <td> 
+                    <a class="text-decoration-none" name = "edit" href="/edit?rollno= <%=students[i].rollno %>"  >🖊️</a>    
+                    <a class="text-decoration-none" name = "edit" href="/delete?rollno= <%=students[i].rollno %>">❌</a>    
+                </td>
+            </tr>
+            <% } %>
+    </table>
+    <small>showing <%= students.length %> records in table</small>
+    <%}%>
+    <% if(students.length ==0 ){ %>
+        <small>No records found!</small>
+    <% } %>
+</div>
+<br/><br/>

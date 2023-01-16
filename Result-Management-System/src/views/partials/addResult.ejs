@@ -1,0 +1,35 @@
+<br/><div class="row">
+    <div class="inline col-lg-4 text-left">
+        <button class="btn btn-primary" onclick="location.href='/teacher'">Back</button>
+    </div>
+    <div class="inline col-lg-4 text-center">
+        <b>Add New Result</b>
+    </div>
+    <div class="inline col-lg-4 text-end">
+        <button class="btn btn-danger" onclick="location.href='/'">logout</button>
+    </div>
+</div>
+<hr/>
+<br/>
+<form class="container" action="/submitAddResult" method="post">
+    <div class="form-group">
+        <label for="rollno">Roll Number</label>
+        <input type="text" class="form-control" name="rollno" placeholder="Enter Roll Number">
+    </div>
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Enter Full Name">
+    </div>
+    <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" class="form-control" name="dob" placeholder="Enter your Date of Birth">
+        </div>
+        <div class="form-group">
+        <label for="score">Score</label>
+        <input type="text" class="form-control" name="score" placeholder="Enter Score">
+        </div>
+    <br/>
+    <input type="submit" class="btn btn-primary"/>
+</form>
+
+<br/><br/>
